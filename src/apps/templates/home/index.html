@@ -1,10 +1,60 @@
-{% extends 'base.html' %}
 
+{% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
     <div class="main_container">
-        <h4>МАЭЙ</h4>
+        <div class='main_container_posts'>
+            <div class="posts">
+                <div class='user_profile_img'>
+                    <img src="https://pp.userapi.com/c845521/v845521265/1958c1/Pwk8qgTbAog.jpg" width="20" height="20" />
+                    <a href="">Eugene</a>
+                </div>
+                <div class='post_info_title'>
+                    <a href="">Ищем в команду маркетолога , кто согласен поработать за идею пишите.</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="post_comments_views">
+                    <div class='comments'>
+                        <img src="{% static './img/comment.png' %}" /><span>13</span>
+                    </div>
+                    <div class='vote'>
+                        <img src="{% static './img/vote.png' %}"/><span>2</span>
+                    </div>
+                    <div class='view'>
+                        <img src="{% static './img/eye.png' %}"/><span>2121</span>
+                    </div>
+                </div>
+                <div class="post_info">
+                    <a href="">поиск партнера</a>
+                </div>
+            </div>
+            <div class="posts">
+                <div class='user_profile_img'>
+                    <img src="https://pp.userapi.com/c845521/v845521265/1958c1/Pwk8qgTbAog.jpg" width="20" height="20" />
+                    <a href="">Eugene</a>
+                </div>
+                <div class='post_info_title'>
+                    <a href="">Ищем в команду маркетолога , кто согласен поработать за идею пишите.</a>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="post_comments_views">
+                    <div class='comments'>
+                        <img src="{% static './img/comment.png' %}" /><span>13</span>
+                    </div>
+                    <div class='vote'>
+                        <img src="{% static './img/vote.png' %}"/><span>2</span>
+                    </div>
+                    <div class='view'>
+                        <img src="{% static './img/eye.png' %}"/><span>2121</span>
+                    </div>
+                </div>
+                <div class="post_info">
+                    <a href="">поиск партнера</a>
+                </div>
+            </div>
+        </div>
     </div>
 
 {% endblock %}
