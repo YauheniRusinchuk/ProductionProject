@@ -1,7 +1,7 @@
 <div class="header_container">
 
     <div class='header_logo'>
-        <a href="">НПДБ</a>
+        <a href="">GOBUSSINES</a>
         <form>
             <input type="text" placeholder="Поиск ..." name="" value="">
         </form>
@@ -15,8 +15,16 @@
     </div>
 
     <div class="header_login_and_register">
-        <a href="">регистрация</a>
-        <a href="">войти</a>
+        {% if user.is_authenticated %}
+            <div class='user_authenticated'>
+                <a href="">{{user.username}}</a>
+            </div>
+        {% else %}
+            <div class='user_is_not_login'>
+                <a href="">регистрация</a>
+                <a href="">войти</a>
+            </div>
+        {% endif %}
     </div>
 
 </div>
