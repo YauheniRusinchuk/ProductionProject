@@ -63,12 +63,28 @@ body {
     font-weight: bold;
 }
 
+.header_container .header_login_and_register .user_authenticated {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
 .header_container .header_login_and_register .user_authenticated  a{
     text-decoration: none;
     color: grey;
     border: none;
     font-size: 10px;
     font-weight: bold;
+    margin:  0 5px;
+}
+
+.header_container .header_login_and_register .user_authenticated .btn_logout {
+    color: #e6e6e6;
+}
+
+
+.header_container .header_login_and_register .user_authenticated img {
+    border-radius: 50%;
 }
 
 

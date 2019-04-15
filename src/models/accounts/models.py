@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import pre_save
+from django.utils.text import slugify
 from django.contrib.auth import get_user_model
 
 
@@ -13,3 +15,10 @@ class Account(models.Model):
 
     def __str__(self):
         return f"Это аккаунт юзера {self.user.username}"
+
+
+def pre_save_account_receiver(sender, instance, *args, **kwargs):
+    slug = slugify(instance.user.username)
+    instance.slug = slug
+
+pre_save.connect(pre_save_account_receiver, sender=Account)
