@@ -13,6 +13,15 @@ def home(request):
     return render(request, 'home/index.html', {})
 
 
+
+class RegisterUser(View):
+
+    def get(self, request, *args ,**kwargs):
+        if request.user.is_authenticated:
+            return redirect('home:home_page')
+        return render(request, 'home/register.html', {})
+
+
 class LoginView(View):
     ''' Отображение страницы входа  '''
     def get(sefl, request, *args, **kwargs):

@@ -17,14 +17,14 @@
     <div class="header_login_and_register">
         {% if user.is_authenticated %}
             <div class='user_authenticated'>
-                <a href="">
+                <a href="{{user.account.get_absolute_url}}">
                     <img src="{{user.account.avatar.url}}" width="30" height="30" />
                 </a>
                 <a class='btn_logout' href="{% url 'home:logout_page' %}">выйти</a>
             </div>
         {% else %}
             <div class='user_is_not_login'>
-                <a href="">регистрация</a>
+                <a href="{% url 'home:register_page' %}">регистрация</a>
                 <a href="{% url 'home:login_page' %}">войти</a>
             </div>
         {% endif %}
