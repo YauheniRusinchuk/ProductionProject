@@ -9,6 +9,8 @@ def home(request):
 class LoginView(View):
     ''' Отображение страницы входа  '''
     def get(sefl, request, *args, **kwargs):
+        if request.user.is_authenticated:
+            return redirect('home:home_page')
         return render(request, 'home/login.html', {})
 
     ''' Метод пост для проверки существования юзера и вход '''

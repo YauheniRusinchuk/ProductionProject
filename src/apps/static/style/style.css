@@ -222,5 +222,41 @@ body {
 }
 
 .logn_container {
+    width: 50%;
     margin: 70px auto;
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.logn_container p {
+    font-weight: bold;
+}
+
+.logn_container form input{
+    border: 2px solid #e6e6e6;
+    border-radius: 20px;
+    padding: 3px 10px;
+    outline: none;
+    margin: 10px;
+}
+
+.logn_container form button {
+    border: 2px solid #46a5f2;
+    border-radius: 20px;
+    color: #46a5f2;
+    padding: 3px 10px;
+    background-color: white;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition-property: background-color, color;
+    transition-duration: 0.3s;
+}
+
+.logn_container form button:hover {
+    background-color: #46a5f2;
+    color: white;
 }
